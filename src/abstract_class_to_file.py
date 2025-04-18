@@ -5,7 +5,7 @@ class AbstractClassToFile(ABC):
     """Абстрактный класс для записи в файл"""
 
     def __init__(self, filename):
-        self.filename = filename
+        self._filename = filename
 
     @abstractmethod
     def write_data(self, vacancies):

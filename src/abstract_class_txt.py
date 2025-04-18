@@ -12,17 +12,17 @@ class AbstractClassTXT(AbstractClassToFile):
     def write_data(self, vacancies):
         """Запись данных в txt"""
 
-        with open(self.filename, "a", encoding="utf=8") as file:
+        with open(self._filename, "a", encoding="utf=8") as file:
             file.write(vacancies)
 
     def get_data(self):
         """Получение данных txt"""
 
-        with open(self.filename, encoding="utf=8") as file:
+        with open(self._filename, encoding="utf=8") as file:
             return file.readlines()
 
     def del_data(self):
         """Удаление данных из файла"""
 
-        with open(self.filename, "w", encoding="utf-8"):
+        with open(self._filename, "w", encoding="utf-8"):
             pass
