@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class AbstractClassAPI(ABC):
     """Абстрактный класс для получения вакансии с hh.ru"""
 

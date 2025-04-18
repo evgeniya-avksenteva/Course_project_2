@@ -2,7 +2,8 @@ from abc import ABC, abstractmethod
 
 
 class AbstractClassToFile(ABC):
-    """ Абстрактный класс для записи в файл """
+    """Абстрактный класс для записи в файл"""
+
     def __init__(self, filename):
         self.filename = filename
 
