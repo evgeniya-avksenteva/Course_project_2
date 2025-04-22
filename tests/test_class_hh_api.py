@@ -29,7 +29,9 @@ def test_get_vacancies(mock_get, headhunter_api):
 
     # Проверка, что requests.get был вызван с правильными параметрами
     mock_get.assert_called_once_with(
-        headhunter_api.url, params={"text": keyword, "per_page": per_page, "only_with_salary": True}
+        headhunter_api.url,
+        headers={"User-Agent": "HH-User-Agent"},  # Добавляем заголовки в проверку
+        params={"text": keyword, "per_page": per_page, "only_with_salary": True},
     )
 
     # Проверка возвращаемых данных

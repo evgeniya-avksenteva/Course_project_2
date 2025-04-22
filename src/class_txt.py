@@ -1,13 +1,12 @@
 from src.abstract_class_to_file import AbstractClassToFile
 
 
-class AbstractClassTXT(AbstractClassToFile):
+class ClassTXT(AbstractClassToFile):
     """Класс для записи в txt-файл"""
 
     def __init__(self, filename):
         """Конструктор класса"""
-
-        super().__init__(filename)
+        self._filename = filename
 
     def write_data(self, vacancies):
         """Запись данных в txt"""

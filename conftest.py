@@ -1,8 +1,8 @@
 import pytest
 
 from config import TEST_VACANCIES_PATH_JSON, TEST_VACANCIES_PATH_TXT
-from src.abstract_class_json import AbstractClassJSON
-from src.abstract_class_txt import AbstractClassTXT
+from src.class_json import ClassJSON
+from src.class_txt import ClassTXT
 from src.class_vacancy import Vacancy
 
 
@@ -34,9 +34,9 @@ def vacancy2():
 
 @pytest.fixture()
 def json_saver():
-    return AbstractClassJSON(filename=TEST_VACANCIES_PATH_JSON)
+    return ClassJSON(filename=TEST_VACANCIES_PATH_JSON)
 
 
 @pytest.fixture()
 def txt_saver():
-    return AbstractClassTXT(filename=TEST_VACANCIES_PATH_TXT)
+    return ClassTXT(filename=TEST_VACANCIES_PATH_TXT)
